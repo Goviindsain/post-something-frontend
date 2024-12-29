@@ -41,7 +41,7 @@ function CreatePost() {
 		setSuccess(false);
 
 		try {
-			await axios.post("http://localhost:5000/api/posts", formData);
+			await axios.post("https://post-something-backend.onrender.com/api/posts", formData);
 			setNewPost({ title: "", content: "", file: null });
 			setSuccess(true);
 		} catch (err) {
