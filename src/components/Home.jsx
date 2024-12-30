@@ -66,14 +66,14 @@ function Home() {
 								{post.file.endsWith(".mp4") ? (
 									<video width="320" height="240" controls>
 										<source
-											src={`https://post-something-backend.onrender.com/uploads/${post.file}`}
+											src={post.file} // Cloudinary URL is stored in the `file` field
 											type="video/mp4"
 										/>
 										Your browser does not support the video tag.
 									</video>
 								) : (
 									<img
-										src={`https://post-something-backend.onrender.com/uploads/${post.file}`}
+										src={post.file} // Cloudinary URL is stored in the `file` field
 										alt="Post Media"
 									/>
 								)}
